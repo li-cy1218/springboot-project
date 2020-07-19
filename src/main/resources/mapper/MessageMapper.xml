@@ -8,4 +8,11 @@
             message_value as messageValue
          from message
     </select>
+    <select id="selectMessageDataForId" resultType="message">
+        select
+            message_id as messageId,
+            message_value as messageValue
+         from message
+         where message_id = #{messageId}
+    </select>
 </mapper>

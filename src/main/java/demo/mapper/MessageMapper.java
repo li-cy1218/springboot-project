@@ -9,4 +9,6 @@ import java.util.List;
 public interface MessageMapper {
 
     public List<Message> selectAllMessageData();
+
+    public List<Message> selectMessageDataForId(int messageId);
 }
