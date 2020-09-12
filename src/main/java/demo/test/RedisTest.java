@@ -20,6 +20,7 @@ public class RedisTest {
         // 获取用来操作String类型数据的valueOperations对象
         ValueOperations<String, String> operations = redisTemplate.opsForValue();
 
+
         // 借助valueOperations对象存入数据
         String key = "hello";
         String value = "morning";
@@ -30,4 +31,5 @@ public class RedisTest {
         System.out.println(readValue);
 
     }
+
 }

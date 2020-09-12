@@ -8,5 +8,7 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    public List<User> queryUserList();
+    String selectPassWord(String userName);
+
+    void addUser(User user);
 }
