@@ -31,5 +31,4 @@ public class RedisTest {
         System.out.println(readValue);
 
     }
-
 }
