@@ -11,6 +11,7 @@ import java.util.List;
 @Component
 public interface UserMapper {
 
+<<<<<<< HEAD
     User getUserDetail(@Param("userName") String userName);
 
     List<User> queryUserList();
@@ -18,4 +19,9 @@ public interface UserMapper {
     void insertUserMessage(User user);
 
 
+=======
+    String selectPassWord(String userName);
+
+    void addUser(User user);
+>>>>>>> c76d43a9412afa4883e08eef45080ae3b43d8bd7
 }

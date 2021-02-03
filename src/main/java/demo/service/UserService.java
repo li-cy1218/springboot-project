@@ -2,6 +2,7 @@ package demo.service;
 
 import demo.entity.User;
 import demo.mapper.UserMapper;
+<<<<<<< HEAD
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +40,31 @@ public class UserService {
         LOGGER.info("End register user message...");
         return 1;
     }
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
+public class UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    public void addUser(User user) {
+        userMapper.addUser(user);
+    }
+
+    public Boolean selectUser(User user) {
+        String userName = user.getUserName();
+        String passWord = user.getPassWord();
+
+        String selectResult = userMapper.selectPassWord(userName);
+
+        return selectResult == null ? true : passWord.equals(selectResult);
+    }
+
+
+>>>>>>> c76d43a9412afa4883e08eef45080ae3b43d8bd7
 }
