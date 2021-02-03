@@ -4,41 +4,47 @@ public class User {
 
     private Integer id;
 
-    private String userName;
+    private String email;
 
-    private String passWord;
+    private String password;
 
-    private String name;
+    private String role;
+
+    private String shop;
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getEmail() {
+        return email;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getPassword() {
+        return password;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public String getRole() {
+        return role;
     }
 
-    public String getName() {
-        return name;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getShop() {
+        return shop;
+    }
+
+    public void setShop(String shop) {
+        this.shop = shop;
     }
 }
