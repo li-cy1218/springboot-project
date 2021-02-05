@@ -2,10 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="demo.mapper.UserMapper">
-    <select id="selectPassWord" resultType="demo.entity.User">
-        select passWord from user where userName = #{userName}
+    <select id="getUserDetail" resultType="demo.entity.User">
+        select * from user where email = #{userName}
     </select>
-    <insert id="addUser" >
-        insert into user (userName, passWord, name) values (#{userName}, #{passWord}, #{name})
+    <insert id="insertUserMessage">
+        insert into user(
+            email,
+            password,
+            role,
+            shop
+        )values (
+            #{email},
+            #{password},
+            #{role},
+            #{shop}
+        )
     </insert>
 </mapper>
