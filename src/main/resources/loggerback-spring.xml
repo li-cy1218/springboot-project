@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration scan="false" debug="false">
+    <property name="logFile" value="springProject" />
+    <property name="logPath" value="F:\user\logs" />
+
+    <appender class="ch.qos.logback.core.ConsoleAppender">
+        <file>${logPath}\${logfile}.log</file>
+        <Layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+            </Pattern>
+        </Layout>
+    </appender>
+
+</configuration>
