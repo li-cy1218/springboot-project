@@ -17,11 +17,19 @@ import java.util.List;
 @Component
 public class SecurityService implements UserDetailsService {
 
-    @Autowired
     private UserMapper userMapper;
 
-    @Autowired
     private UserManager userManager;
+
+    @Autowired
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+    @Autowired
+    public void setUserManager(UserManager userManager) {
+        this.userManager = userManager;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
